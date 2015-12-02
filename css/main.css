@@ -1,0 +1,21 @@
+.center_vertical, #container{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+body{
+    color: black;
+    font-size: +36px;
+    background: radial-gradient(circle at center,#ECEFF1,#FFFFFF);
+}
+
+
+
+.list{
+    list-style-type: none;
+    padding-right: 2.5em;
+}
