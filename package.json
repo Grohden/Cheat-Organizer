@@ -8,6 +8,7 @@
   },
   "author": "Gabriel Rohden",
   "window": {
+    "resizable":false,
     "toolbar": true,
     "width": 700,
     "height": 600

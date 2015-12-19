@@ -1,4 +1,4 @@
-.center_vertical, #container{
+.center_vertical, #container,#save{
     display: block;
     position: relative;
     text-align: center;
@@ -13,9 +13,54 @@ body{
     background: radial-gradient(circle at center,#ECEFF1,#FFFFFF);
 }
 
+button{
+    font-family: sans-serif;
+    font-size: 16px;
+    background: rgba(0,0,0,0.1);
+    border-style:solid;
+    border-width:0px;	
+    border-color:transparent;
+    padding: 7px 10px;
+}
+
+/*td,tr,table{border: 1px solid black;}*/
+
+button:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3)
+    
+}
+
+input{    
+    padding: 5px 10px;
+}
+
 
 
 .list{
     list-style-type: none;
     padding-right: 2.5em;
 }
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    padding-top: 10px;    
+}
+
+
+#container{border: 1px rgba(0,0,0,0.5);}
+
+
+#save{
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
