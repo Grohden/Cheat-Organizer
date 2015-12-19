@@ -1,3 +1,5 @@
+
+
 $(function () {
     "use strict";
     var os = require('os');
@@ -29,16 +31,17 @@ $(function () {
     // Get the current window
     var win = gui.Window.get();
 
-/*    // Create a new window and get it
-    var new_win = gui.Window.open('configs/configs.html',{
-        resizeble:false,
+    var window_configs={
+        resizable:false,
         position: 'center',
         width:510,
         height:400,
-        "toolbar":false,
+        "toolbar":true,
         fullscreen:false
-
-        });*/
+    }
+    
+    // Create a new window and get it
+    var new_win = gui.Window.open('configs/configs.html',window_configs);
     // And listen to new window's focus event
     
     //open_above(win,new_win);

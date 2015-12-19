@@ -7,15 +7,15 @@ function open_above(current_window, new_window) {
     new_window.focus();
 }
 
-/*
-    var path = './';
-    var fs = require('fs');
 
-      fs.watch(path, function() {
-        if (location)
-          location.reload();
-      });
-*/
+//    var path = './';
+//    var fs = require('fs');
+//
+//      fs.watch(path, function() {
+//        if (location)
+//          location.reload();
+//      });
+
 
 
 
