@@ -1,6 +1,6 @@
 {
   "name": "Cheat Organizer",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "",
   "single-instance":false,
   "main": "index.html",
@@ -9,7 +9,7 @@
   },
   "author": "Gabriel Rohden",
   "window": {
-    "resizable":false,
+    "resizable":true,
     "toolbar": true,
     "width": 700,
     "height": 600
