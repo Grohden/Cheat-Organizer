@@ -1,8 +1,7 @@
 {
   "name": "Cheat Organizer",
-  "version": "0.5.0",
+  "version": "0.5.5",
   "description": "",
-  "single-instance":false,
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +11,20 @@
     "resizable":true,
     "toolbar": true,
     "width": 700,
-    "height": 600
+    "height": 600,
+    "min_width": 500,
+    "min_height": 500
   },
-  "license": "ISC",
-  "dependencies": {
-
-  }
+  "licenses": [
+   {
+       "type": "Apache License 2.0",
+       "url": "http://www.apache.org/licenses/LICENSE-2.0"
+   }
+  ],
+  "repositories": [
+       {
+            "type": "git", 
+            "url": "https://github.com/Grohden/Cheat-Organizer"
+       }
+  ]
 }

@@ -1,11 +1,10 @@
-.center_vertical, #container,#save{
+.center-vertical,#save{
     display: block;
     position: relative;
     text-align: center;
     margin-left: auto;
     margin-right: auto; 
 }
-
 
 body{
     color: black;
@@ -23,8 +22,6 @@ button{
     padding: 7px 10px;
 }
 
-/*td,tr,table{border: 1px solid black;}*/
-
 button:hover{
     cursor: pointer;
     background: rgba(0,0,0,0.3)
@@ -35,6 +32,9 @@ input{
     padding: 5px 10px;
 }
 
+input[type="checkbox"]{
+	cursor: pointer;
+}
 
 
 
@@ -51,12 +51,6 @@ input{
     padding-top: 10px;    
 }
 
-
-#container{
-    border: 1px rgba(0,0,0,0.5);
-}
-
-
 #save{
     padding: 10px 30px;
     margin-bottom: 10px;
@@ -67,21 +61,23 @@ input{
     top: 5%;
     right: 5%;
     transition: all 3s;
-    position: fixed;
+    position: absolute;
     width: 50px;
     height: 50px;
     outline: none;
     background: url(../img/cog.png);
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #cog:hover{
     transform: rotate(360deg);
 }
 
-#background-modal{
+#config-modal{
     background: rgb(175,175,175);
-    position: fixed;
+    position: absolute;
     top: 4%;
     right: 4%;
     display: none;
@@ -91,7 +87,7 @@ input{
     
 }
 
-#cover-modal{
+#background-modal{
     top: 0%;
     cursor: pointer;
     left: 0%;
@@ -102,18 +98,88 @@ input{
     position: fixed;
 }
 
-#background-modal #path{
+#config-modal #path{
     color: black;
 }
 
-#background-modal p{margin-top: 10px;}
+#config-modal p{
+    margin-top: 10px;
+}
 
-#background-modal *{
+#config-modal *{
     color: white;  
+}
+
+#flipster-ul img{width:200px;}
+
+.my-flipster{
+    padding-bottom: 30px;
+    margin-top: 50px;
+    min-height: 40%;
+}
+
+
+.cheats-holder{
+    border-spacing: 0px 20px;
+}
+
+.cheat-container {
+    height: 50%;
+    text-align: left;
+    transition:all 0.5s;
+    padding: 15px 90px 15px 3px;
+    margin: 0px;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-bottom: 0px solid black;
+}
+
+.cheat-container:hover{
+    cursor: pointer;
+    color: white;
+    background: grey;
+}
+.cheat-container:hover .checkbox-input{
+    border-right: 1px solid blue;
+}
+
+.cheat-container .checkbox-input {
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid grey;
+}
+
+.active , .deactive {
+    border-top: 0px solid black;
+}
+
+@media screen and (max-width: 733px){
+    #config-modal{ 
+        right: 4%;
+        left: 4%;
+        transition: transform 3s;
+    }
 }
 
 
 
 
+/*experiments*/
 
 
+
+h4 {
+    transition: all 2s ease-in;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    white-space: nowrap;
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    top: 0px;
+    margin: 0px;
+    padding: 5px 10%;
+    color: white;
+    background: rgb(50,50,50);
+    
+}
