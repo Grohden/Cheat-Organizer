@@ -173,7 +173,7 @@ function saveConfigs(){
     configureFlipster();
 
     fs.writeFile(outputFilename, JSON.stringify(formObject), function(err) {
-        console.log(err ? "Error saving file:" + err : "JSON saved to " + outputFilename);
+        console.info(err ? "Error saving file:" + err : "JSON saved to " + outputFilename);
     });
 }
 
@@ -202,17 +202,20 @@ function factoryButton(){
 			return 0;	
 	 	}
 	}
-}
+} // try later.
 
-
+//fs.readFileSync(oplFolders.CFG+fs.readdirSync(oplFolders.CFG)[0],"UTF-8") TODO IMPLEMENT.
+function ReadConfigFile(cheatName){
 //TODO: Implement this, its working but it need to be somewhere.
-fs.readFile('D:\\PS2\\CFG\\SLUS_208.98.cfg',{encoding:"UTF-8"}, function(err, data) {
-  if (err) throw err;
-  var something={};
-	a=data.split("\n");
-	a.forEach(function (element){
-		element=element.split("=");
-		something[element[0]]=element[1];
-	});
-	console.log(something);
-});
+	fs.readFile(oplFolders.CFG+cheatName+".cfg",{encoding:"UTF-8"}, function(err, data) {
+	  if (err) throw err;
+	  var something={};
+		a=data.split("\n");
+		a.forEach(function (element){
+			if (element=="") return;
+			element=element.split("=");
+			something[element[0]]=element[1];
+		});
+		console.log(something);
+	});	
+}
