@@ -2,86 +2,28 @@
     <head>
         <title>Cheat-Organizer</title>
         <meta name="author" content="Gabriel Rohden">
-        <script src="../jquery-1.12.1.min.js"></script>
-        <script src="js/jquery.flipster.min.js"></script>
-        <link rel="stylesheet" href="css/jquery.flipster.min.css" />
+    
+        <!-- Style sheets -->
         <link rel="stylesheet" href="css/main.css" />
-        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/configurations.css" />
+        
     </head>
-    <body>
-        <!--Flipster-->
-        <div class="my-flipster">
-          <ul id="flipster-ul">
-          </ul>
-        </div>
-        <!--Flipster-->
+    <body ng-app="CheatsApp" ng-controller="indexController">
+                
         
-        <table class="cheats-holder center-vertical" cellspacing="100">
-            <td class="active">
-                <form id="active-form">
-                <div class="cheat-container">
-                    <span class="checkbox-input"><input type="checkbox"/></span>
-                    <span class="title">Vida Infinita</span>
-                    
-                </div>
-                <div class="cheat-container">
-                    <span class="checkbox-input"><input type="checkbox"/></span>
-                    <span class="title">Magia Infinita</span>
-                </div>
-                </form>
-            </td>
-            <td class="deactive"> 
-                <form id="deactive-form">
-                <div class="cheat-container">
-                    <span class="checkbox-input"><input type="checkbox"/></span>
-                    <span class="title">Pãos voadores</span>
-                    
-                </div>
-                <div class="cheat-container">
-                    <span class="checkbox-input"><input type="checkbox"/></span>
-                    <span class="title">DINHEROOOO infinitO</span>
-                </div>
-                </form>
-            </td>
-            <tr />
-                <td><button id="activate">Activate</button></td>
-                <td><button id="deactivate">Deactivate</button></td>
-		</table>
-        <!--Configs Modal since i'm lazy i'm goin to implement this with j-s/query --> 
+        <div configurations></div>
         
+        <!-- Vendor: Angular, followed by our custom Javascripts -->
+        <!-- Our Website Javascripts -->
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
         
-        <!--Covers everything except modal and listen to clicks to close modal-->
-        <div id="background-modal"></div>
+        <script src="js/index.js"></script>
         
-        <div id="config-modal">
-            <p>Configurations</p>
-            <form id="configs_form">
-                <table class="center-vertical">
-                    <td>Show games by:</td>
-                    <td>
-                        <input type='radio' name="show_by" value="Cover">Cover</input>
-                        <input type='radio' name="show_by" value="Background" checked>Background</input>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="show_title" value="true" checked>Show game title</input>
-                        <input type="checkbox" name="show_title" value="false" style="display:none"></input> 
-                    </td>
-                    <tr/>
-                    <td>Folder:</td>
-                    <td>
-                        <input type="text" id="path" name="opl_path" placeholder="Pasta de acesso do OPL"/>
-                        <input style="display:none;" id="fileDialog" type="file" nwdirectory />                      
-                    </td>
-                    <td><button id="search" type="button">Search...</button></td>
-                </table>
-            </form>
-            <div class="footer">
-            <button id="save">Save</button>
-            </div>
-        </div>
-        <button id="cog"></button>
-        <!--Configs Modal-->
-<br><br><br><br><br><br><br>
+        <!-- Configuratons -->
+        <script src="js/configurations.controller.js" type="text/javascript"></script>
+        <script src="js/configurations.directive.js" type="text/javascript"></script>
+        
     </body>
 </html> 
 

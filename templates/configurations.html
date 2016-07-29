@@ -1,0 +1,10 @@
+<input type="checkbox" name="toggle" id="toggle"/>
+<label for="toggle" id="cog"></label>
+<div class="modal" ng-click="hide()"></div>
+<div id="configs-container">
+    <p>Games path: 
+        <input type="text" value="{{games_folder}}" ng-click="get_folder()" class="modal-input" />
+        <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{games_folder}}"  nwdirectory/>
+    </p>
+</div>
+
