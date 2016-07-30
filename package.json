@@ -10,7 +10,7 @@
   "window": {
     "resizable":true,
     "toolbar": true,
-    "width": 700,
+    "width": 800,
     "height": 600,
     "min_width": 500,
     "min_height": 500

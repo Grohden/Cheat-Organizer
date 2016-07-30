@@ -6,23 +6,32 @@
         <!-- Style sheets -->
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/configurations.css" />
+        <link rel="stylesheet" href="css/showcase.css" />
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
         
     </head>
-    <body ng-app="CheatsApp" ng-controller="indexController">
-                
-        
+    <body ng-app="CheatsApp">
+                       
         <div configurations></div>
+        <div show-case id="showcase"></div>
         
         <!-- Vendor: Angular, followed by our custom Javascripts -->
         <!-- Our Website Javascripts -->
-       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         
         <script src="js/index.js"></script>
         
-        <!-- Configuratons -->
+        <!-- Configuratons module -->
         <script src="js/configurations.controller.js" type="text/javascript"></script>
         <script src="js/configurations.directive.js" type="text/javascript"></script>
+
+        <!-- Show case module -->
+        <script src="js/showcase.controller.js" type="text/javascript"></script>
+        <script src="js/showcase.directive.js" type="text/javascript"></script>
         
     </body>
 </html> 

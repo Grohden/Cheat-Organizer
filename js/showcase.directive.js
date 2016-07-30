@@ -1,18 +1,18 @@
 app.directive(
-    'configurations',
+    'showCase',
     function() {
 
         // Return the directive configuration.
         return({
-            controller: 'configurationsController',
+            controller: 'showCaseController',
             link: link,
             restrict: 'A',
-            templateUrl: 'templates/configurations.html'
+            templateUrl: 'templates/show_case.html'
         });
 
         // I bind the JavaScript events to the scope.
         function link( scope, element, attributes ) {
-            console.info( 'Configurations directive linking.' );
+            console.info( 'Showcase directive linking.' );
         }
 
     }

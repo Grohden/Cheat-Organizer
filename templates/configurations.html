@@ -2,9 +2,29 @@
 <label for="toggle" id="cog"></label>
 <div class="modal" ng-click="hide()"></div>
 <div id="configs-container">
-    <p>Games path: 
-        <input type="text" value="{{games_folder}}" ng-click="get_folder()" class="modal-input" />
-        <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{games_folder}}"  nwdirectory/>
-    </p>
+    <ul>
+        <li>
+            <label for="games_folder">Games folder</label>
+            <input type="text" 
+                   name="games_folder" 
+                   ng-model="gamesFolder"
+                   ng-click="getFolder()" 
+                   class="modal-input"
+                   id="games_folder"
+                   />
+            <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{gamesFolder}}"  nwdirectory/>
+        </li>
+        <li>Show game by
+            <input type="radio" name="show_by" id="cover" value="cover">
+            <label for="cover">Cover</label>
+            <input type="radio" name="show_by" id="photo" value="photo">
+            <label for="photo">Photo</label>
+        </li>
+        <li>
+        <input type="checkbox" id="show_title">
+        <label for="show_title">Show game title</label>
+        </li>
+    </ul>
+    <button id="save">Save</button>
 </div>
 
