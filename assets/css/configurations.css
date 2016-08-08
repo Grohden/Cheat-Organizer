@@ -3,6 +3,7 @@
 #cog:hover{
     cursor: pointer;
 }
+
 #cog{
     position: absolute;
     right: 5%;
@@ -45,11 +46,11 @@
     background-image: url('../img/inverse-cog.png');
 }
 
-
 /* Modal is hidden */
 #toggle ~ .modal{
     opacity: 0;
 }
+
 #configs-container {
     opacity: 0;
     top:-50%;
@@ -62,7 +63,6 @@
     color: white;
     background-color: #263238;
     padding: 40px;
-    box-shadow: 1px 1px 25px  rgba(100,100,100,.5);
     transition: all 0.7s;
     right: 5%;
     z-index: 4;
@@ -105,6 +105,7 @@
     margin: 10px 20px;
     
 }
+
 #configs-container ul li {
     list-style: none;
     margin: 10px 0px;

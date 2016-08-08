@@ -1,18 +1,21 @@
 <input type="checkbox" name="toggle" id="toggle"/>
 <label for="toggle" id="cog"></label>
+
 <div class="modal" ng-click="hide()"></div>
-<div id="configs-container">
+
+<div id="configs-container" class="card">
     <ul>
+        <li><input ng-model='configs.folder'></li>
         <li>
             <label for="games_folder">Games folder</label>
             <input type="text" 
                    name="games_folder" 
-                   ng-model="gamesFolder"
-                   ng-click="getFolder()" 
-                   class="modal-input"
                    id="games_folder"
-                   />
-            <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{gamesFolder}}"  nwdirectory/>
+                   class="modal-input"
+                   ng-model="configs.folder"
+                   ng-click="getFolder()" 
+            />
+            <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
         </li>
         <li>Show game by
             <input type="radio" name="show_by" id="cover" value="cover">

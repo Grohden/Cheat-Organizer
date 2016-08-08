@@ -1,0 +1,12 @@
+<h1 class="large" >Chose a game</h1>
+<div class="list-container">
+    <div class="card" ng-repeat="x in games" ng-click="y = y==x.id ? -1 : x.id" ng-class="y == x.id ? 'show' : 'item bounce' ">
+        <img ng-src="{{!(exists(configs.folder + '/ART/' + x.code+'_COV.png')) 
+                     ? notFoundCover 
+                     : configs.folder + '/ART/' + x.code+'_COV.png'}}" />
+        <div class="info-container">
+        <h4 class="title">{{x.title}}</h4>
+        <small>{{x.code}}</small>           
+        </div>
+    </div>
+</div>
