@@ -2,41 +2,42 @@
     'use strict';
     /*global angular, require*/
     angular.module('showcase').controller('showCaseController', function ($scope, sharedConfigurations) {
-        
-        $scope.notFoundCover = '.assets\\img\\404.jpg';
-
+        var _self = this;
+        var fs = require('fs');
         $scope.configs = sharedConfigurations;
+        $scope.NOT_FOUND_COVER = '.\\assets\\img\\404.jpg';
 
-        $scope.exists = function (file) {
-            var fs = require('fs');
+
+        _self.NOT_FOUND_COVER = '.\\assets\\img\\404.jpg';
+        _self.exists = function (file) {
             return fs.existsSync(file);
         };
 
-        
-        $scope.$watch('configs.folder', function() {
-            $scope.games = $scope.getGamesObject();
-        });
-        
-        
-        $scope.getGamesObject = function () {
-            var fs = require('fs');
-            var folder = $scope.configs.folder;
-            var ISOs = fs.existsSync(folder + '\\DVD\\') ? fs.readdirSync(folder + '\\DVD\\') : [];
-            var gamesObj = [];
-            var x = 0;
-                                    
-            for (x = 0; x < ISOs.length; x++) {
-                gamesObj.push({
-                    id: x,
-                    code: ISOs[x].slice(0, 11),
-                    title: ISOs[x].slice(12, ISOs[x].length - 4)
-                });
-            }
-            
-            return gamesObj;
+        /**
+         * Read specified path, search for ISOs with OPL name format
+         * and return an object array containing id, title, and code.
+         * @returns {Array}
+         */
+        _self.getGamesObject = function () {
+            if ($scope.configs.text === undefined) return;
+            var ISOs = fs.existsSync($scope.configs.text[0].value + "\\DVD\\") ? fs.readdirSync($scope.configs.text[0].value + "\\DVD\\") : [];
+            console.log(ISOs.length,ISOs);
+
+            return ISOs.map(function (iso) {
+                return {
+                    id: iso,
+                    code: iso.slice(0, 11),
+                    title: iso.slice(12, iso.length - 4)
+                };
+            });
+
         };
 
-        $scope.games = $scope.getGamesObject();
+
+        $scope.$watch('configs.text[0].value', function() {
+            $scope.games = _self.getGamesObject();
+            console.log($scope.games);
+        });
 
     });
 }());

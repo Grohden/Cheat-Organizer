@@ -11,6 +11,7 @@ body{
 }
 
 button{
+    cursor: pointer;
     min-height: 2em;
     background: rgba(255,255,255,0.6);
     border: none;

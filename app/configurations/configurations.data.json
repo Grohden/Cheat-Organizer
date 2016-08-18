@@ -1,6 +1,32 @@
 {
-    "language":"pt-br",
-    "games_folder":"D:\\PS2",
-    "show_by":"cover",
-    "show_title":false
+  "text": [
+    {
+      "keyId": 2,
+      "checked": false,
+      "value": "D:\\PS2",
+      "name": "games_folder"
+    }
+  ],
+  "radio": [
+    {
+      "keyId": 3,
+      "checked": false,
+      "value": "photo",
+      "name": "show_by"
+    },
+    {
+      "keyId": 4,
+      "checked": true,
+      "value": "cover",
+      "name": "show_by"
+    }
+  ],
+  "checkbox": [
+    {
+      "keyId": 5,
+      "checked": true,
+      "value": "on",
+      "name": "show_title"
+    }
+  ]
 }

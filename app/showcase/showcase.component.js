@@ -1,11 +1,13 @@
 (function () {
     'use strict';
     /*global angular*/
-    angular.module('showcase').component(
+    angular.module('showcase').directive(
         'showCase',
-        {
-            controller: 'showCaseController',
-            templateUrl: 'app/showcase/showcase.template.html'
+        function () {
+            return {
+                controller: 'showCaseController',
+                templateUrl: 'app/showcase/showcase.template.html'
+            };
         }
     );
 }());
