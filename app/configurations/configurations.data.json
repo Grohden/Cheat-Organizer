@@ -10,13 +10,13 @@
   "radio": [
     {
       "keyId": 3,
-      "checked": false,
+      "checked": true,
       "value": "photo",
       "name": "show_by"
     },
     {
       "keyId": 4,
-      "checked": true,
+      "checked": false,
       "value": "cover",
       "name": "show_by"
     }

@@ -5,11 +5,11 @@
         var _self = this;
         var fs = require('fs');
         $scope.configs = sharedConfigurations;
-        $scope.NOT_FOUND_COVER = '.\\assets\\img\\404.jpg';
+        $scope.NOT_FOUND_COVER = 'D:\\Cheat-Organizer\\assets\\img\\404.jpg';
+        $scope.b='.\\assets\\img';
 
 
-        _self.NOT_FOUND_COVER = '.\\assets\\img\\404.jpg';
-        _self.exists = function (file) {
+        $scope.exists = function (file) {
             return fs.existsSync(file);
         };
 

@@ -13,11 +13,11 @@
     padding: 60px 50px;
 }
 
-#showcase .list-container{
+.list-container{
     padding: 0px 20px;
 }
 
-#showcase .list-container::before, #showcase .list-container::after {
+.list-container::before, .list-container::after {
 	content: '';
 	display: block;
     margin: 2% 6%; 
@@ -26,7 +26,7 @@
 	background: rgba(100,100,100,0.5);
 }
 
-#showcase .item{
+.item{
     display: inline-block;
     position: static;
     padding: 5px 10px;
@@ -38,7 +38,7 @@
     border: 1px solid rgba(0,0,0,0.1);
 }
 
-#showcase .bounce:hover{
+.bounce:hover{
     cursor: pointer;
     transform: scale(1.12);
     box-shadow: 8px 15px 15px  rgba(100,100,100,.6);
@@ -51,7 +51,6 @@
 
 .info-container{
     display: inline-block;
-    float: right;
     padding: 5px;
     margin-left: 10px;
     height: auto;

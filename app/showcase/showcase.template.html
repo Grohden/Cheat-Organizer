@@ -1,7 +1,9 @@
 <h1 class="large" >Chose a game</h1>
 <div class="list-container">
-        <h4 ng-bind="configs.text[0].value"></h4>
-        <h4 ng-repeat="game in games">
+    <div ng-repeat="game in games" class="card item">
+        <img ng-src="{{configs.text[0].value +'\\ART\\'+ game.code +'_COV.png'}}"/>
+        <div class="info-container">
             {{game.title}}
-        </h4>
+        </div>
+    </div>
 </div>
