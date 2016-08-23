@@ -22,10 +22,6 @@
                 chooser.trigger('click');
             };
 
-            $scope.hide = function () {
-                $('#toggle').prop('checked', false);
-            };
-
             /**
              * Register the id and option of the DIRECTIVE for later access
              * @param attrs: must be attrs of the directive

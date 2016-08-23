@@ -1,9 +1,36 @@
 <h1 class="large" >Chose a game</h1>
-<div class="list-container">
-    <div ng-repeat="game in games" class="card item">
-        <img ng-src="{{configs.text[0].value +'\\ART\\'+ game.code +'_COV.png'}}"/>
+<div class="list-container" ng-show="expanded==false">
+    <div ng-repeat="game in games"
+         class='item card'
+         ng-click='openInContainer(game)'
+         ng-class='{"expanded": expanded==game.code}'>
+        <img ng-src="{{game.artPath}}"/>
         <div class="info-container">
-            {{game.title}}
+                {{game.title}}
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-z-index"
+     ng-hide="expanded==false"
+    ng-click="expanded=false"></div>
+<div class="above-cog" id="show-container" ng-hide="expanded==false">
+    <div class="show-image-container">
+        <img ng-src="{{openedGame.artPath}}">
+    </div>
+    <div class="show-content-container">
+        <div class='content'>
+            <div>{{openedGame.title}}</div>
+            <div class='content-list'>
+                <div id='active-content'>
+                    <input type='checkbox'>
+                    <div>Lorem Ipsum</div>
+                </div>
+                <div id='inactive-content'>
+                    <input type='checkbox'>
+                    <div>Ipsum Lorem</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

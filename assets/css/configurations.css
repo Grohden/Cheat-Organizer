@@ -1,100 +1,84 @@
 /*------ Modal styles begin -----*/
+#cog, #configs-container {
+    position:fixed;
+}
 
 #cog:hover{
     cursor: pointer;
 }
 
 #cog{
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    z-index: 5;
+    background: url(../img/cog.png) no-repeat center;
+    transition: all 1000ms 0ms;
+    background-size: contain;
     padding: 7px 10px;
     cursor: pointer;
-    transition: all 1s;
-    width: 50px;
     height: 50px;
-    background-image: url(../img/cog.png);
-    background-size: contain;
-    background-position: center; 
-    background-repeat: no-repeat;
+    width: 50px;
+    right: 5%;
+    top: 5%;
 }
 
 /* Modal is shown */
-#toggle:checked ~ .modal{
-    position: fixed;
-    left: 0;
-    top:0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding: 0px;
+.toggle:checked ~ .modal{
     opacity: 1;
 }
 
-#toggle:checked ~ #configs-container {
+.toggle:not(:checked) ~ .modal{
+    opacity: 0;
+    display: none;
+}
+
+.toggle:checked ~ #configs-container {
+    opacity: 1;
     top:5%;
-    opacity: 1;
 }
 
-#toggle:checked ~ #cog {
-    width: 25px;
-    height: 25px;
-    top: 6%;
-    right: 6%;
-    transform: rotate(360deg);
+.toggle:checked ~ #cog {
     background-image: url('../img/inverse-cog.png');
+    transform: rotate(360deg);
+    height: 25px;
+    width: 25px;
+    right: 6%;
+    top: 6%;
 }
 
 /* Modal is hidden */
-#toggle ~ .modal{
-    opacity: 0;
-}
-
 #configs-container {
-    opacity: 0;
+    opacity: 1;
     top:-50%;
 }
 
 /* Modal general styles */
-#configs-container, #toggle:checked ~ #configs-container { 
-    min-width: 450px;
-    position: absolute;
-    color: white;
+#configs-container, .toggle:checked ~ #configs-container {
+    -webkit-transition: all 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
     background-color: #263238;
-    padding: 40px;
-    transition: all 0.7s;
+    min-width: 450px;
+    padding: 30px;
+    color: white;
     right: 5%;
-    z-index: 4;
 }
 
-#toggle ~ .modal{
-    background: rgba(0,0,0,0.5);
-    transition: all 1s;
-    z-index: 3;
-}
-
-#toggle {
+.toggle {
     display: none;
 }
 
 /*------ Modal styles end -----*/
 
 .modal-input[type=text]{
-    height: 2em;
-    font-size: 16px;
-    color: white;
-    width: 60%;
-    margin-left: 15px;
-    padding-right:5px;
-    padding-left: 5px;
-    border: none;
-    background-color: rgba(255,255,255,0.1);
-    background-image: url("../img/search.png");
-    background-position: right;
-    background-size: auto;
-    background-repeat: no-repeat;
+    background: rgba(255, 255, 255, 0.1) url("../img/search.png") no-repeat right;
     background-origin: content-box;
+    background-size: auto;
+    padding-left: 10px;
+    border-radius: 1px;
+    font-weight: bold;
+    padding-right:5px;
+    margin-left: 5px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    height: 2em;
+    width: 60%;
 }
 
 .modal-input[type=text]:focus{

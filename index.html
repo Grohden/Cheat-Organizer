@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/configurations.css" />
         <link rel="stylesheet" href="assets/css/showcase.css" />
+        <link rel="stylesheet" href="app/vendor/animate.css" />
                 
     </head>
     <body ng-app="CheatsApp">
                        
         <configurations>
 
-            <input type="checkbox" name="toggle" id="toggle"/>
-            <label for="toggle" id="cog"></label>
-            <div class="modal" ng-click="hide()"></div>
+            <input type="checkbox" name="toggle" id="toggle" class='toggle'/>
+            <label for="toggle" id="cog" class="cog-z-index"></label>
+            <div class="modal modal-z-index" ng-click="hideToggleModal()"></div>
 
 
-            <div id="configs-container" class="card">
+            <div id="configs-container" class="card above-modal">
                 <ul>
                     <li>
                         <label for="games_folder">Games folder</label>
@@ -69,7 +70,7 @@
         <script src="app/configurations/configurations.directive.js" type="text/javascript"></script>
         <script src="app/configurations/option.directive.js" type="text/javascript"></script>
         <script src="app/configurations/persist.directive.js" type="text/javascript"></script>
-        
+
     </body>
 </html> 
 
