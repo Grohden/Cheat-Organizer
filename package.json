@@ -1,18 +1,16 @@
 {
-  "name": "Cheat Organizer",
-  "version": "0.5.5",
-  "description": "",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "Cheat Organizer",
+  "version": "0.5.8",
+  "description": "",
   "author": "Gabriel Rohden",
   "window": {
+    "position":"center",
     "resizable":true,
     "toolbar": true,
-    "width": 700,
+    "width": 800,
     "height": 600,
-    "min_width": 500,
+    "min_width": 790,
     "min_height": 500
   },
   "licenses": [

@@ -1,10 +1,5 @@
 # Cheat-Organizer
-This is a program for cheat codes management. it needs ominicovert to convert the cheats to RAW , it <b>will</b> be able to move a cheat from a folder to another(wich will deactivate or activate the cheat before the game started.)
-
-Flipster
--------
-This app uses flipster lib found in :https://github.com/drien/jquery-flipster
-
+This is a program for cheat codes management. it needs ominicovert to convert the cheats to RAW , it <b>will</b> be able to move a cheat from a folder to another(wich will deactivate or activate the cheat before the game started).
 
 License
 -------

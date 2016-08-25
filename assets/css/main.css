@@ -1,0 +1,82 @@
+body{
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Rubik', serif;
+    background-size: cover;
+    font-size: 20px;
+    color: black;
+}
+
+button{
+    border: 2.5px solid rgb(204, 204, 204);
+    text-transform: capitalize;
+    border-radius: 3px;
+    text-align: center;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    padding: 7px 0px;
+    position: relative;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
+}
+
+small{
+    color: grey;
+}
+
+.card{
+    box-shadow: 8.6px 7px 10px  #9d9d9e;
+    border-radius: 1.5px;
+}
+
+.above-all{
+    z-index: 999;
+}
+
+.above-cog{
+    z-index:50;
+}
+
+.cog-z-index{
+    z-index: 40;
+}
+
+.above-modal{
+    z-index: 30;
+}
+
+.modal-z-index{
+    z-index: 20;
+}
+
+.above-body{
+    z-index: 10;
+}
+
+.large{
+    font-size: 72px;
+}
+
+.modal{
+    background: rgba(255, 255, 255, 0.75);
+    transition: all 1000ms 0ms;
+    position: fixed;
+    height: 100%;
+    border: none;
+    padding: 0px;
+    width: 100%;
+    left: 0px;
+    top:0px;
+}
+
+.content-list {
+    list-style:none;
+}
+
+.content-list * {
+    display:inline-block;
+}
