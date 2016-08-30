@@ -1,3 +1,6 @@
+@modal-z-index: @above-body+10;
+@above-body: 10;
+
 body{
     background: url("../img/background.png") no-repeat center;
     background-size: cover;
@@ -27,8 +30,8 @@ small{
 }
 
 .card{
-    box-shadow: 8.6px 7px 10px  #9d9d9e;
-    border-radius: 1.5px;
+    box-shadow: 8px 7px 10px  #9d9d9e;
+    border-radius: 1px;
 }
 
 .above-all{
@@ -47,13 +50,7 @@ small{
     z-index: 30;
 }
 
-.modal-z-index{
-    z-index: 20;
-}
 
-.above-body{
-    z-index: 10;
-}
 
 .large{
     font-size: 72px;
@@ -65,10 +62,10 @@ small{
     position: fixed;
     height: 100%;
     border: none;
-    padding: 0px;
+    padding: 0;
     width: 100%;
-    left: 0px;
-    top:0px;
+    left: 0;
+    top:0;
 }
 
 .content-list {
