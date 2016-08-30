@@ -9,7 +9,6 @@
             var OUTPUT_PATH = 'app/configurations/';
             $scope.configs = sharedConfigurations;
 
-
             //TODO: create directives for those 2 functions
             $scope.getFolder = function () {
                 var chooser = $('#folderDialog');

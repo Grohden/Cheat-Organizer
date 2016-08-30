@@ -35,6 +35,7 @@
 }
 
 .toggle:checked ~ #cog {
+    will-change: transform;
     background-image: url('../img/inverse-cog.png');
     transform: rotate(360deg);
     height: 25px;

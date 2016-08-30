@@ -1,9 +1,7 @@
 body{
-    background-image: url("../img/background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Rubik', serif;
+    background: url("../img/background.png") no-repeat center;
     background-size: cover;
+    font-family: 'Rubik', serif;
     font-size: 20px;
     color: black;
 }
