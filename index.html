@@ -5,54 +5,61 @@
     
         <!-- Style sheets -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
-        <link rel="stylesheet/less" type="text/css" href="assets/css/main.less"/>
-        <link rel="stylesheet/less" type="text/css" href="assets/css/show-case.less"/>
-        <link rel="stylesheet" href="assets/css/configurations.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/show-case.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/configurations.css"/>
 
     </head>
     <body ng-app="CheatsApp">
-                       
-        <configurations>
 
-            <input type="checkbox" name="toggle" id="toggle" class='toggle'/>
-            <label for="toggle" id="cog" class="cog-z-index"></label>
-            <div class="modal modal-z-index" ng-click="hideToggleModal()"></div>
+        <div class="cog"
+             ng-click="openedModal='cog-modal'"
+             ng-class="openedModal=='cog-modal' ? 'cog-opened':'cog-closed'"
+             id="cog">
+            <img src="assets/img/cog.png"/>
+        </div>
 
+        <div class="modal"
+             ng-click="openedModal=false"
+             ng-class="openedModal=='cog-modal' ? 'shown':'hidden'">
+            <configurations>
+                    <div id="configs-container" class="card settings-container">
+                        <ul>
+                            <li>
+                                <label for="games_folder">Games folder</label>
+                                <input type="text"
+                                       persist-value
+                                       name="games_folder"
+                                       id="games_folder"
+                                       class="modal-input"
+                                       ng-model="configs.text[0].value"
+                                       ng-click="getFolder()"
+                                />
+                                <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
+                            </li>
+                            <li>Show game by
+                                <input type="radio" name="show_by" id="photo" value="photo" persist-value>
+                                <label for="photo">Photo</label>
+                                <input type="radio" name="show_by" id="cover" value="cover" persist-value>
+                                <label for="cover">Cover</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="show_title" id="show_title" persist-value>
+                                <label for="show_title">Show game title</label>
+                            </li>
+                        </ul>
+                        <button id="save" persist-all>Save</button>
+                    </div>
+                </configurations>
+        </div>
 
-            <div id="configs-container" class="card above-modal">
-                <ul>
-                    <li>
-                        <label for="games_folder">Games folder</label>
-                        <input type="text" 
-                               persist-value
-                               name="games_folder" 
-                               id="games_folder"
-                               class="modal-input"
-                               ng-model="configs.text[0].value"
-                               ng-click="getFolder()"
-                        />
-                        <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
-                    </li>
-                    <li>Show game by
-                        <input type="radio" name="show_by" id="photo" value="photo" persist-value>
-                        <label for="photo">Photo</label>
-                        <input type="radio" name="show_by" id="cover" value="cover" persist-value>
-                        <label for="cover">Cover</label>
-                    </li>
-                    <li>
-                    <input type="checkbox" name="show_title" id="show_title" persist-value>
-                    <label for="show_title">Show game title</label>
-                    </li>
-                </ul>
-                <button id="save" persist-all>Save</button>
-            </div>
-        </configurations>
-        <show-case id="showcase"></show-case>
+        <show-case></show-case>
+        <button>test
+        </button>
 
         <!-- Vendor: Angular, followed by our custom Javascripts -->
         <script type="text/javascript" src="app/vendor/jquery-1.12.0.min.js"></script>
         <script type="text/javascript" src="app/vendor/angular.js"></script>
-        <script type="text/javascript" src="app/vendor/less.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script> -->
        
         <!-- App -->

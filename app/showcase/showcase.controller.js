@@ -4,10 +4,10 @@
     angular.module('showcase').controller('showCaseController', function ($scope, sharedConfigurations, $window) {
         var _self = this;
         var fs = require('fs');
-        $scope.configs = sharedConfigurations;
-        $scope.openedGame = null;
-        $scope.expanded = false;
-        $scope.NOT_FOUND_COVER = 'D:\\Cheat-Organizer\\assets\\img\\404.jpg';
+        $scope.configs              = sharedConfigurations;
+        $scope.openedGame           = null;
+        $scope.expanded             = false;
+        $scope.NOT_FOUND_COVER      = 'D:\\Cheat-Organizer\\assets\\img\\404.jpg';
 
         $scope.exists = function (file) {
             return fs.existsSync(file);

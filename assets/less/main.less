@@ -1,0 +1,156 @@
+/*Fucntions*/
+.horizontal-centered(@percentage-width){
+  margin-left: (100% - @percentage-width)/2;
+  margin-right: (100% - @percentage-width)/2;
+  width: @percentage-width;
+}
+.debug(@color){border: 1px solid @color;}
+
+@modal-index:50;
+/*Element styles*/
+body{
+  background: url("../img/background.png") no-repeat center;
+  background-size: cover;
+  font-family: 'Rubik', serif;
+  font-size: @default-font-size;
+  color: black;
+}
+
+button{
+  position: relative;
+  text-transform: capitalize;
+  border-radius: 3px;
+  text-align: center;
+  background: none;
+  font-size: @default-font-size;
+  cursor: pointer;
+  color: #cccccc;
+  padding: 7px 0;
+  border: 2.5px solid rgb(204, 204, 204);
+}
+
+small{
+  color: grey;
+}
+
+/*Class styles*/
+.card{
+  box-shadow: 8px 7px 10px  #9d9d9e;
+  border-radius: 1px;
+}
+
+.large{
+    font-size: 72px;
+}
+
+.hidden{
+  opacity: 0;
+  display: none;
+}
+
+.show{
+  opacity: 1;
+  display: block;
+}
+
+/* Modal - Variables */
+@modal-container-bg:#263238;
+@default-font-size:20px;
+
+.modal{
+  z-index: @modal-index;
+  background-color: rgba(255,255,255,0.8);
+  transition: opacity 1s;
+  position: fixed;
+  border: none;
+  height:   100%;
+  width:    100%;
+  padding:  0;
+  left:     0;
+  top:      0;
+
+  button{
+    .horizontal-centered(30%);
+  }
+
+  .settings-container{
+    margin-right: 10%;
+    width:        45%;
+    padding:      10px;
+    float: right;
+    background: @modal-container-bg;
+
+    .setting-input[type=text]{
+      background: rgba(255, 255, 255, 0.1) url("../img/search.png") no-repeat right;
+      background-origin: content-box;
+      background-size: auto;
+      font-weight: bold;
+      border: none;
+      color: white;
+      width:          60%;
+      height:         2em;
+      padding-left:   10px;
+      font-size:      16px;
+      border-radius:  1px;
+      padding-right:  5px;
+      margin-left:    5px;
+
+      &:focus{
+        outline-color: orange;
+      }
+    }
+  }
+}
+
+.content-list {
+    list-style:none;
+    * {
+      display:inline-block;
+    }
+}
+
+
+@cog-dimensions:50px;
+
+.img{
+  .debug(grey);
+  position: relative;
+  right: 1px;
+  transition: all 1.5s;
+  height: 100%;
+}
+
+.cog-opened{
+  float: left;
+  cursor: pointer;
+
+  img{
+    .img;
+    transform: rotate(360deg);
+  }
+}
+
+
+.cog-closed{
+  height:@cog-dimensions;
+  width:@cog-dimensions;
+  top: 1%;
+  left:10%;
+  cursor: pointer;
+
+  img{
+    .img;
+  }
+}
+
+@cog-index:@modal-index+10;
+.cog {
+  .debug(red);
+  width: auto;
+  height: auto;
+  position:fixed;
+  z-index:@cog-index;
+  cursor: pointer;
+  transition: all 1000ms 0ms;
+  background-size: contain;
+}
