@@ -10,7 +10,7 @@
             $scope.configs = sharedConfigurations;
 
             //TODO: create directives for those 2 functions
-            $scope.getFolder = function () {
+            $scope.getFolder = function getFolder() {
                 var chooser = $('#folderDialog');
                 chooser.unbind('change');
                 chooser.change(function () {
@@ -31,6 +31,7 @@
                 options.push(attrs);
             };
 
+            /** Put the saved persisters on service for some later acess*/
             _self.putSavedPersistersOnService = function putSavedPersistersOnService(){
                 var x;
                 $scope.configs = {};
@@ -56,6 +57,7 @@
                 }
             };
 
+            /** Write in a json the directive configuration*/
             _self.saveConfigurations = function saveConfigurations() {
                 var fs;
                 try {

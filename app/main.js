@@ -14,32 +14,22 @@
 
     //makes the opened cog be always at its half on the screen
     $(window).resize(function(){
-        putHalfCogAtLeft();
+        hideHalfCog();
     });
 
     $('.cog-opened img').ready(function(){
-        putHalfCogAtLeft();
+        hideHalfCog();
     });
 }());
 
 
-var putHalfCogAtLeft = function putHalfCogAtLeft() {
+/**
+ * Places the cog in half on the left side of the screen
+ */
+var hideHalfCog = function hideHalfCog() {
     var cog = $('.cog-opened img')[0];
     if (!cog) return;
 
     var dimens = cog.getBoundingClientRect();
     document.body.style.setProperty('--cog-left-pos', -(dimens.width / 2)+'px');
-    cog.style.marginLeft = 0;
-};
-
-//rewrites style tag. style tag loses its content when this function is called.
-var writeInStyleTag = function writeInSyleTag(classOrId, obj = {}) {
-    if(!classOrId) return;
-    var str="\n"+classOrId+"{";
-    for(var x=0; x<Object.keys(obj).length;x++){
-        str+="\n"+Object.keys(obj)[x]+":"+obj[Object.keys(obj)[x]]+";";
-    }
-    str+="\n}";
-    //override content
-    $('#main-style').text(str);
 };

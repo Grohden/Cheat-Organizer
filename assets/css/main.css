@@ -106,7 +106,6 @@ small {
 .cog-opened {
   height: 100%;
   width: auto;
-  left: var(--test-var);
 }
 .cog-opened img {
   position: relative;
@@ -114,7 +113,7 @@ small {
   transition: all 1.5s;
   height: 100%;
   transform: rotate(360deg);
-  left: var(--cog-left-pos);;
+  left: var(--cog-left-pos);
 }
 .cog-closed {
   height: 50px;
