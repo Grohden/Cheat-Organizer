@@ -28,7 +28,7 @@ var putHalfCogAtLeft = function putHalfCogAtLeft() {
     if (!cog) return;
 
     var dimens = cog.getBoundingClientRect();
-    writeInStyleTag('.cog-opened img',{left:-(dimens.width / 2)+'px'});
+    document.body.style.setProperty('--cog-left-pos', -(dimens.width / 2)+'px');
     cog.style.marginLeft = 0;
 };
 

@@ -61,7 +61,7 @@
                 try {
                     fs = require('fs'); //NWJS fileSystem is required to save a file.
                 } catch (error) {
-                    console.error('Require is not defined. Run in a NWJS window/app to save configurations');
+                    console.error('Require is not defined. Run in a NWJS window/app be able to save configurations');
                     return;
                 }
                 /* Put the actual options on service*/

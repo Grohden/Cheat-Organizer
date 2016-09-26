@@ -1,4 +1,15 @@
-/*Fucntions*/
+/*-----------------------------*\
+         Root css variables
+\*-----------------------------*/
+
+:root{
+  --cog-left-pos: -50%;
+}
+
+
+/*-------------------*\
+         Mixins
+\*-------------------*/
 .horizontal-centered(@percentage-width){
   margin-left: (100% - @percentage-width)/2;
   margin-right: (100% - @percentage-width)/2;
@@ -7,7 +18,10 @@
 .debug(@color){border: 1px solid @color;}
 
 @modal-index:50;
-/*Element styles*/
+
+/*-------------------*\
+     Element styles
+\*-------------------*/
 body{
   background: url("../img/background.png") no-repeat center;
   background-size: cover;
@@ -40,7 +54,7 @@ small{
 }
 
 .large{
-    font-size: 72px;
+  font-size: 72px;
 }
 
 .hidden{
@@ -103,10 +117,10 @@ small{
 }
 
 .content-list {
-    list-style:none;
-    * {
-      display:inline-block;
-    }
+  list-style:none;
+  * {
+    display:inline-block;
+  }
 }
 
 
@@ -123,6 +137,8 @@ small{
   height: 100%;
   width: auto;
 
+  left: var(--test-var);
+
   img{
     .img;
     transform: rotate(360deg);
@@ -137,7 +153,7 @@ small{
 
   img{
     .img;
-    left:0;
+    left:var(--cog-left-pos);
   }
 }
 

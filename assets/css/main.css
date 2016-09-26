@@ -1,5 +1,15 @@
-/*Fucntions*/
-/*Element styles*/
+/*-----------------------------*\
+         Root css variables
+\*-----------------------------*/
+:root {
+  --cog-left-pos: -50%;
+}
+/*-------------------*\
+         Mixins
+\*-------------------*/
+/*-------------------*\
+     Element styles
+\*-------------------*/
 body {
   background: url("../img/background.png") no-repeat center;
   background-size: cover;
@@ -96,6 +106,7 @@ small {
 .cog-opened {
   height: 100%;
   width: auto;
+  left: var(--test-var);
 }
 .cog-opened img {
   position: relative;
@@ -103,7 +114,7 @@ small {
   transition: all 1.5s;
   height: 100%;
   transform: rotate(360deg);
-  left: 0;
+  left: var(--cog-left-pos);;
 }
 .cog-closed {
   height: 50px;
