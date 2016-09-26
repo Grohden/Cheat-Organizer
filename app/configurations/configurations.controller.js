@@ -9,9 +9,8 @@
             var OUTPUT_PATH = 'app/configurations/';
             $scope.configs = sharedConfigurations;
 
-
             //TODO: create directives for those 2 functions
-            $scope.getFolder = function () {
+            $scope.getFolder = function getFolder() {
                 var chooser = $('#folderDialog');
                 chooser.unbind('change');
                 chooser.change(function () {
@@ -32,6 +31,7 @@
                 options.push(attrs);
             };
 
+            /** Put the saved persisters on service for some later acess*/
             _self.putSavedPersistersOnService = function putSavedPersistersOnService(){
                 var x;
                 $scope.configs = {};
@@ -57,12 +57,13 @@
                 }
             };
 
+            /** Write in a json the directive configuration*/
             _self.saveConfigurations = function saveConfigurations() {
                 var fs;
                 try {
                     fs = require('fs'); //NWJS fileSystem is required to save a file.
                 } catch (error) {
-                    console.error('Require is not defined. Run in a NWJS window/app to save configurations');
+                    console.error('Require is not defined. Run in a NWJS window/app be able to save configurations');
                     return;
                 }
                 /* Put the actual options on service*/

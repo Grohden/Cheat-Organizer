@@ -4,72 +4,84 @@
         <meta name="author" content="Gabriel Rohden">
     
         <!-- Style sheets -->
-        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-        <link href="assets/css/main.css" rel="stylesheet"/>
-        <link href="assets/css/configurations.css" rel="stylesheet"/>
-        <link href="assets/css/showcase.css" rel="stylesheet"/>
-                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/show-case.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/configurations.css"/>
+
+        <style id="main-style">
+
+
+        </style>
+
     </head>
     <body ng-app="CheatsApp">
-                       
-        <configurations>
 
-            <input type="checkbox" name="toggle" id="toggle" class='toggle'/>
-            <label for="toggle" id="cog" class="cog-z-index"></label>
-            <div class="modal modal-z-index" ng-click="hideToggleModal()"></div>
+        <div class="cog"
+             ng-click="openedModal='cog-modal';hideHalfCog()"
+             ng-class="openedModal=='cog-modal' ? 'cog-opened':'cog-closed'"
+             id="cog">
+            <img src="assets/img/cog.png"/>
+        </div>
 
+        <div class="modal"
+             ng-click="openedModal=false"
+             ng-class="openedModal=='cog-modal' ? 'shown':'hidden'">
+            <configurations>
+                    <div id="configs-container" class="card settings-container">
+                        <ul>
+                            <li>
+                                <label for="games_folder">Games folder</label>
+                                <input type="text"
+                                       persist-value
+                                       name="games_folder"
+                                       id="games_folder"
+                                       class="modal-input"
+                                       ng-model="configs.text[0].value"
+                                       ng-click="getFolder()"
+                                />
+                                <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
+                            </li>
+                            <li>Show game by
+                                <input type="radio" name="show_by" id="photo" value="photo" persist-value>
+                                <label for="photo">Photo</label>
+                                <input type="radio" name="show_by" id="cover" value="cover" persist-value>
+                                <label for="cover">Cover</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="show_title" id="show_title" persist-value>
+                                <label for="show_title">Show game title</label>
+                            </li>
+                        </ul>
+                        <button id="save" persist-all>Save</button>
+                    </div>
+                </configurations>
+        </div>
 
-            <div id="configs-container" class="card above-modal">
-                <ul>
-                    <li>
-                        <label for="games_folder">Games folder</label>
-                        <input type="text" 
-                               persist-value
-                               name="games_folder" 
-                               id="games_folder"
-                               class="modal-input"
-                               ng-model="configs.text[0].value"
-                               ng-click="getFolder()"
-                        />
-                        <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
-                    </li>
-                    <li>Show game by
-                        <input type="radio" name="show_by" id="photo" value="photo" persist-value>
-                        <label for="photo">Photo</label>
-                        <input type="radio" name="show_by" id="cover" value="cover" persist-value>
-                        <label for="cover">Cover</label>
-                    </li>
-                    <li>
-                    <input type="checkbox" name="show_title" id="show_title" persist-value>
-                    <label for="show_title">Show game title</label>
-                    </li>
-                </ul>
-                <button id="save" persist-all>Save</button>
-            </div>
-        </configurations>
-        <show-case id="showcase"></show-case>
-        
+        <show-case></show-case>
+        <button>test</button>
+
         <!-- Vendor: Angular, followed by our custom Javascripts -->
-        <script src="app/vendor/jquery-1.12.0.min.js"></script>
-        <script src="app/vendor/angular.js"></script>
+        <script type="text/javascript" src="app/vendor/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="app/vendor/angular.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script> -->
        
         <!-- App -->
-        <script src="app/app.js"></script>
-        <script src="app/main.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/main.js"></script>
     
         <!-- Show case module -->
-        <script src="app/showcase/showcase.module.js" type="text/javascript"></script>
-        <script src="app/showcase/showcase.controller.js" type="text/javascript"></script>
-        <script src="app/showcase/showcase.component.js" type="text/javascript"></script>        
+        <script type="text/javascript" src="app/showcase/showcase.module.js"></script>
+        <script type="text/javascript" src="app/showcase/showcase.controller.js"></script>
+        <script type="text/javascript" src="app/showcase/showcase.component.js"></script>
         
         <!-- Configuratons module -->
-        <script src="app/configurations/configurations.module.js" type="text/javascript"></script>
-        <script src="app/configurations/configurations.service.js" type="text/javascript"></script>
-        <script src="app/configurations/configurations.controller.js" type="text/javascript"></script>
-        <script src="app/configurations/configurations.directive.js" type="text/javascript"></script>
-        <script src="app/configurations/option.directive.js" type="text/javascript"></script>
-        <script src="app/configurations/persist.directive.js" type="text/javascript"></script>
+        <script type="text/javascript" src="app/configurations/configurations.module.js" ></script>
+        <script type="text/javascript" src="app/configurations/configurations.service.js" ></script>
+        <script type="text/javascript" src="app/configurations/configurations.controller.js" ></script>
+        <script type="text/javascript" src="app/configurations/configurations.directive.js" ></script>
+        <script type="text/javascript" src="app/configurations/option.directive.js" ></script>
+        <script type="text/javascript" src="app/configurations/persist.directive.js" ></script>
 
     </body>
 </html> 
