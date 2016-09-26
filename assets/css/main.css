@@ -1,0 +1,126 @@
+/*Fucntions*/
+/*Element styles*/
+body {
+  background: url("../img/background.png") no-repeat center;
+  background-size: cover;
+  font-family: 'Rubik', serif;
+  font-size: 20px;
+  color: black;
+}
+button {
+  position: relative;
+  text-transform: capitalize;
+  border-radius: 3px;
+  text-align: center;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  padding: 7px 0;
+  border: 2.5px solid #cccccc;
+}
+small {
+  color: grey;
+}
+/*Class styles*/
+.card {
+  box-shadow: 8px 7px 10px  #9d9d9e;
+  border-radius: 1px;
+}
+.large {
+  font-size: 72px;
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+.show {
+  opacity: 1;
+  display: block;
+}
+/* Modal - Variables */
+.modal {
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: opacity 1s;
+  position: fixed;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+.modal button {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+}
+.modal .settings-container {
+  margin-right: 10%;
+  width: 45%;
+  padding: 10px;
+  float: right;
+  background: #263238;
+}
+.modal .settings-container .setting-input[type=text] {
+  background: rgba(255, 255, 255, 0.1) url("../img/search.png") no-repeat right;
+  background-origin: content-box;
+  background-size: auto;
+  font-weight: bold;
+  border: none;
+  color: white;
+  width: 60%;
+  height: 2em;
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 1px;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+.modal .settings-container .setting-input[type=text]:focus {
+  outline-color: orange;
+}
+.content-list {
+  list-style: none;
+}
+.content-list * {
+  display: inline-block;
+}
+.img {
+  position: relative;
+  right: 1px;
+  transition: all 1.5s;
+  height: 100%;
+}
+.cog-opened {
+  height: 100%;
+  width: auto;
+}
+.cog-opened img {
+  position: relative;
+  right: 1px;
+  transition: all 1.5s;
+  height: 100%;
+  transform: rotate(360deg);
+  left: 0;
+}
+.cog-closed {
+  height: 50px;
+  width: 50px;
+}
+.cog-closed img {
+  position: relative;
+  right: 1px;
+  transition: all 1.5s;
+  height: 100%;
+  left: 0;
+}
+.cog {
+  cursor: pointer;
+  left: 1px;
+  position: fixed;
+  z-index: 60;
+  transition: all 1000ms 0ms;
+  background-size: contain;
+}

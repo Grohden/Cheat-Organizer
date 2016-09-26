@@ -9,11 +9,17 @@
         <link rel="stylesheet" type="text/css" href="assets/css/show-case.css"/>
         <link rel="stylesheet" type="text/css" href="assets/css/configurations.css"/>
 
+        <style id="main-style">
+
+
+        </style>
+
     </head>
     <body ng-app="CheatsApp">
 
         <div class="cog"
-             ng-click="openedModal='cog-modal'"
+             ng-click="openedModal='cog-modal';putHalfCogAtLeft()"
+             onclick="setTimeout(putHalfCogAtLeft,1200)"
              ng-class="openedModal=='cog-modal' ? 'cog-opened':'cog-closed'"
              id="cog">
             <img src="assets/img/cog.png"/>

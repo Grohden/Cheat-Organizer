@@ -113,7 +113,6 @@ small{
 @cog-dimensions:50px;
 
 .img{
-  .debug(grey);
   position: relative;
   right: 1px;
   transition: all 1.5s;
@@ -121,12 +120,13 @@ small{
 }
 
 .cog-opened{
-  float: left;
-  cursor: pointer;
+  height: 100%;
+  width: auto;
 
   img{
     .img;
     transform: rotate(360deg);
+    left:0;
   }
 }
 
@@ -134,23 +134,19 @@ small{
 .cog-closed{
   height:@cog-dimensions;
   width:@cog-dimensions;
-  top: 1%;
-  left:10%;
-  cursor: pointer;
 
   img{
     .img;
+    left:0;
   }
 }
 
 @cog-index:@modal-index+10;
 .cog {
-  .debug(red);
-  width: auto;
-  height: auto;
+  cursor: pointer;
+  left:1px;
   position:fixed;
   z-index:@cog-index;
-  cursor: pointer;
   transition: all 1000ms 0ms;
   background-size: contain;
 }
