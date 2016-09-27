@@ -1,27 +1,19 @@
 .animate {
   position: absolute !important;
-  -webkit-animation-name: example;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 .not-animate {
   position: absolute !important;
-  -webkit-animation-name: example;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-direction: reverse;
+  animation-name: example;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
 }
-.content-container {
-  position: fixed;
-  left: 10%;
-  top: 10%;
-  right: 10%;
-  bottom: 10%;
-  z-index: 99;
-  background: white;
-}
+.content-container,
 #show-container {
   position: fixed;
   left: 10%;
@@ -30,6 +22,11 @@
   bottom: 10%;
   z-index: 99;
   background: white;
+}
+.show-case-title {
+  margin-left: 9%;
+  margin-right: 9%;
+  position: relative;
 }
 .item {
   will-change: width;

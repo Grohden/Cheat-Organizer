@@ -1,4 +1,4 @@
-<h1 class="large" >Chose a game</h1>
+<h1 class="large show-case-title" >Chose a game</h1>
 <!-- Games List -->
 <div class="list-container">
     <div ng-repeat="game in games"
@@ -26,14 +26,14 @@
         <div class='content'>
             <div>{{openedGame.title}}</div>
             <div class='content-list'>
-                <div id='active-content'>
+                <label id='active-content'>
                     <input type='checkbox'>
-                    <div>Some ramdom text</div>
-                </div>
-                <div id='inactive-content'>
+                    Some ramdom text
+                </label>
+                <label id='inactive-content'>
                     <input type='checkbox'>
-                    <div>Some ramdom text</div>
-                </div>
+                    Some ramdom text
+                </label>
             </div>
         </div>
     </div>

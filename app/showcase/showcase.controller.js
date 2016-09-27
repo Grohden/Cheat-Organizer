@@ -50,10 +50,11 @@
 
             var bounds          = event.currentTarget.getBoundingClientRect();
             var container       = $('#show-container');
-            var containerChilds = $('#show-container *');
+            var containerChilds = container.find('.show-content-container')[0];
 
             //FIXME: visibility doesn't hidde element before container animation
             $(event.currentTarget).animate({visibility:'hidden'},10);
+            containerChilds.style.opacity = 0 ;
 
             //Copy the element caller position
             container.css({
@@ -78,7 +79,11 @@
                     top:     5 + "%",
                     bottom:  5 + "%"
                 });
+
+                $( containerChilds ).fadeTo( "slow", 1 );
+
             });
+
 
 
         };

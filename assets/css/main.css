@@ -131,7 +131,7 @@ small {
   cursor: pointer;
   left: 1px;
   position: fixed;
-  z-index: 60;
+  z-index: 49;
   transition: all 1000ms 0ms;
   background-size: contain;
 }
