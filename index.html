@@ -18,8 +18,8 @@
     <body ng-app="CheatsApp">
 
         <div class="cog"
-             ng-click="openedModal='cog-modal';hideHalfCog()"
-             ng-class="openedModal=='cog-modal' ? 'cog-opened':'cog-closed'"
+             ng-click="openedModal=!openedModal; hideHalfCog()"
+             ng-class="openedModal ? 'cog-opened':'cog-closed'"
              id="cog">
             <img src="assets/img/cog.png"/>
         </div>

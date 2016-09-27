@@ -5,6 +5,10 @@
     var fs = require('fs');
     var F5 = 116;
 
+    var bodyStyles = window.getComputedStyle(document.body);
+    const COG_LEFT_POS = '--cog-left-pos';
+    const COG_ANIMATION_TIMING = '--cog-animation-timing';
+
     //F5 refresh
     document.addEventListener('keydown', function (event) {
         if (event.keyCode === F5) {
@@ -12,24 +16,26 @@
         }
     });
 
+    /**
+     * Places the cog in half on the left side of the screen
+     */
+    var hideHalfCog = function hideHalfCog() {
+        document.body.style.setProperty(COG_LEFT_POS, -(window.innerHeight / 2)+'px');
+    };
+
+
     //makes the opened cog be always at its half on the screen
     $(window).resize(function(){
         hideHalfCog();
     });
 
-    $('.cog-opened img').ready(function(){
+    var init= function init(){
         hideHalfCog();
-    });
+    };
+
+
+    $(document).ready(init);
+
 }());
 
 
-/**
- * Places the cog in half on the left side of the screen
- */
-var hideHalfCog = function hideHalfCog() {
-    var cog = $('.cog-opened img')[0];
-    if (!cog) return;
-
-    var dimens = cog.getBoundingClientRect();
-    document.body.style.setProperty('--cog-left-pos', -(dimens.width / 2)+'px');
-};

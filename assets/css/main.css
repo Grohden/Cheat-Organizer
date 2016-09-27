@@ -3,6 +3,7 @@
 \*-----------------------------*/
 :root {
   --cog-left-pos: -50%;
+  --cog-animation-timing: 1500ms;
 }
 /*-------------------*\
          Mixins
@@ -100,7 +101,7 @@ small {
 .img {
   position: relative;
   right: 1px;
-  transition: all 1.5s;
+  transition: all var(--cog-animation-timing);
   height: 100%;
 }
 .cog-opened {
@@ -110,7 +111,7 @@ small {
 .cog-opened img {
   position: relative;
   right: 1px;
-  transition: all 1.5s;
+  transition: all var(--cog-animation-timing);
   height: 100%;
   transform: rotate(360deg);
   left: var(--cog-left-pos);
@@ -122,7 +123,7 @@ small {
 .cog-closed img {
   position: relative;
   right: 1px;
-  transition: all 1.5s;
+  transition: all var(--cog-animation-timing);
   height: 100%;
   left: 0;
 }

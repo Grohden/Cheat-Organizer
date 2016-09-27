@@ -4,6 +4,7 @@
 
 :root{
   --cog-left-pos: -50%;
+  --cog-animation-timing: 1500ms;
 }
 
 
@@ -129,7 +130,7 @@ small{
 .img{
   position: relative;
   right: 1px;
-  transition: all 1.5s;
+  transition: all var(--cog-animation-timing);
   height: 100%;
 }
 
