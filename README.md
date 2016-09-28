@@ -1,5 +1,11 @@
 # Cheat-Organizer
-This is a program for cheat codes management. it needs ominicovert to convert the cheats to RAW , it <b>will</b> be able to move a cheat from a folder to another(wich will deactivate or activate the cheat before the game started).
+This is a program for cheat codes management. it <b>will</b> be able to move a cheat from a folder to another(wich will deactivate or activate the cheat before you start the game).
+Why would you use this? only if you are bored with OPL manager UI, wich is not a real problem.
+I only wrote this to learn js and another things.
+
+# Usage
+All you have to do to make this program work is point the OPL path, it will detect isos game and cheats.
+To create the cheats you can use omniconverter or acess http://gamehacking.org/ to obtain the cheats.
 
 License
 -------
