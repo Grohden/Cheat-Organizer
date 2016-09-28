@@ -6,7 +6,7 @@
          ng-click="manageGameContainer(game,$event)">
         <img ng-src="{{game.artPath}}"/>
         <div class="info-container">
-                {{game.title}}
+                {{game.gameTitle}}
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="show-content-container">
         <div class='content'>
-            <div>{{openedGame.title}}</div>
+            <div>{{openedGame.gameTitle}}</div>
             <div class='content-list'>
                 <label id='active-content'>
                     <input type='checkbox'>
@@ -34,6 +34,11 @@
                     <input type='checkbox'>
                     Some ramdom text
                 </label>
+            </div>
+            <div>Cht exists: {{ exists(openedGame.chtPath) }}</div>
+            <div ng-repeat="cheat in openedGame.cheatsGroup" class="cheat-group-block">
+                <h3>{{ cheat.cheatTitle }}</h3>
+                <p>{{ cheat.cheatCode }}</p>
             </div>
         </div>
     </div>

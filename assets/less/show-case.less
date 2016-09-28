@@ -1,134 +1,140 @@
 .animate {
-  position: absolute !important;
-  animation-name: example;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
+    position: absolute !important;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 .not-animate {
-  position: absolute !important;
-  animation-name: example;
-  animation-duration: 500ms;
-  animation-iteration-count: 1;
-  animation-direction: reverse;
+    position: absolute !important;
+    animation-name: example;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
 }
 
-.content-container{
-  position: fixed;
-  left:   10%;
-  top:    10%;
-  right:  10%;
-  bottom: 10%;
-  z-index:99;
-  background: white;
+.content-container {
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 99;
+    background: white;
 }
 
-#show-container :extend(.content-container){
+#show-container :extend(.content-container) {
+    font-size: 2.6vh;
 
-}
-
-
-.show-case-title{
-  margin-left: 9%;
-  margin-right: 9%;
-  position: relative;
-}
-
-//legacy pure css
-.item{
-  will-change: width;
-  flex-wrap: wrap;
-  flex-grow: 0;
-  flex-basis: 25%;
-  margin: 1em;
-  padding: 0.5em;
-  cursor: pointer;
-  min-width: 438px;
-  transition: all 1s;
-  position: relative;
-  display: inline-block;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-.list-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-basis: 10%;
-  margin: 0 20px;
-}
-
-.list-container::before, .list-container::after {
-  width: auto;
-  height: 2px;
-  margin: 2% 6%;
-  display: block;
-  background: rgba(100,100,100,0.5);
-}
-
-
-@media screen and (max-width:1077px)  {
-  .item{
-    flex-grow:1;
-
-    img{
-      float: left;
-      display: inline-block;
+    .cheat-group-block {
+        text-align: left;
     }
-  }
 }
 
-.info-container{
-  display: inline-block;
-  padding: 5px;
-  margin-left: 10px;
-  height: auto;
+.show-case-title {
+    margin-left: 9%;
+    margin-right: 9%;
+    position: relative;
 }
 
-.title{
-  margin: 5px 1px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+.show-image-container {
+    width: 31%;
+    display: inline-block;
+    height: ~'calc(100%)';
+
+    img {
+        position: relative;
+        left: ~'calc(50% - 140px/2)';
+        top: ~'calc(50% - 100px)';
+    }
 }
-
-
-.show-image-container img {
-  position: relative;
-  left: ~'calc(50% - 140px/2)';
-  top: ~'calc(50% - 100px)';
-}
-
-.show-content-container, .show-image-container {
-  display: inline-block;
-  height: calc(100%);
-}
-
-.show-image-container {width: 31%;}
 
 .show-content-container {
-  border-left: 2px solid rgb(244, 245, 245);
-  position: absolute;
-  width: calc(69% - 2px);
-  text-align: center;
+    display: inline-block;
+    border-left: 2px solid rgb(244, 245, 245);
+    position: absolute;
+    width: ~'calc(69% - 2px)';
+    text-align: center;
+
+
+}
+
+
+//legacy pure css
+.item {
+    will-change: width;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-basis: 25%;
+    margin: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+    min-width: 438px;
+    transition: all 1s;
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 10%;
+    margin: 0 20px;
+
+    &::before, &::after {
+        width: auto;
+        height: 2px;
+        margin: 2% 6%;
+        display: block;
+        background: rgba(100, 100, 100, 0.5);
+    }
+
+}
+
+
+
+@media screen and (max-width: 1077px) {
+    .item {
+        flex-grow: 1;
+
+        img {
+            float: left;
+            display: inline-block;
+        }
+    }
+}
+
+.info-container {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    height: auto;
+}
+
+.title {
+    margin: 5px 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 .content {
-  top: 10%;
-  position: relative;
-  height: 90%;
+    top: 10%;
+    position: relative;
+    height: 90%;
 }
 
-
 #inactive-content, #active-content {
-  display:inline-block;
-  width:49%;
-  position: relative;
-  border:1px solid blue;
+    display: inline-block;
+    width: 49%;
+    position: relative;
+    border: 1px solid blue;
 }
 
