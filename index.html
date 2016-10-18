@@ -23,16 +23,15 @@
             <img src="assets/img/cog.png"/>
         </div>
 
-        <div class="modal"
-             ng-click="openedModal=false"
-             ng-class="openedModal=='cog-modal' ? 'shown':'hidden'">
-            <configurations>
+        <div  ng-class="openedModal ? 'shown':'hidden'">
+            <div class="modal" ng-click="openedModal=!openedModal"></div>
+            <configurations class="one-list">
                     <div id="configs-container" class="card settings-container">
                         <ul>
                             <li>
                                 <label for="games_folder">Games folder</label>
                                 <input type="text"
-                                       persist-value
+                                       data-gr-persist="'value'"
                                        name="games_folder"
                                        id="games_folder"
                                        class="modal-input"
@@ -42,17 +41,17 @@
                                 <input style="display:none;" id="folderDialog" type="file" nwworkingdir="{{configs.folder}}"  nwdirectory/>
                             </li>
                             <li>Show game by
-                                <input type="radio" name="show_by" id="photo" value="photo" persist-value>
+                                <input type="radio" name="show_by" id="photo" value="photo" data-gr-persist="'checked'">
                                 <label for="photo">Photo</label>
-                                <input type="radio" name="show_by" id="cover" value="cover" persist-value>
+                                <input type="radio" name="show_by" id="cover" value="cover" data-gr-persist="'checked'">
                                 <label for="cover">Cover</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="show_title" id="show_title" persist-value>
+                                <input type="checkbox" name="show_title" id="show_title" data-gr-persist="'checked'">
                                 <label for="show_title">Show game title</label>
                             </li>
                         </ul>
-                        <button id="save" persist-all>Save</button>
+                        <button id="save" data-gr-save>Save</button>
                     </div>
                 </configurations>
         </div>

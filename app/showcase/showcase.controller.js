@@ -138,7 +138,7 @@
         //Watch the game path.
         $scope.$watch('configs.text[0].value', function() {
             $scope.games = _self.getGamesObject();
-            console.log($scope.games);
+            (LOG || ALL) && console.log($scope.games);
         });
 
         //TODO: use css varibles to implement this.

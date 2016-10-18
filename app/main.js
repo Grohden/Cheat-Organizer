@@ -20,7 +20,8 @@
      * Places the cog in half on the left side of the screen
      */
     var hideHalfCog = function hideHalfCog() {
-        document.body.style.setProperty(COG_LEFT_POS, -(window.innerHeight / 2)+'px');
+        //Because i've set in less that the height will always be 100% the calc will be using innerHeight
+        document.body.style.setProperty(COG_LEFT_POS, (-window.innerWidth)+(window.innerHeight/2)+'px');
     };
 
 

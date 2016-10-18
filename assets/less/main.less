@@ -74,7 +74,7 @@ small{
 
 .modal{
   z-index: @modal-index;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(64, 64, 64, 0.51);
   transition: opacity 1s;
   position: fixed;
   border: none;
@@ -83,14 +83,18 @@ small{
   padding:  0;
   left:     0;
   top:      0;
+}
 
+.one-list{
+  z-index: @modal-index+1;
+  position: absolute;
   button{
     .horizontal-centered(30%);
   }
 
   .settings-container{
     margin-right: 10%;
-    width:        45%;
+    width:        auto;
     padding:      10px;
     float: right;
     background: @modal-container-bg;
@@ -115,7 +119,9 @@ small{
       }
     }
   }
+
 }
+
 
 .content-list {
   list-style:none;
@@ -136,12 +142,13 @@ small{
 
 .cog-opened{
   height: 100%;
-  width: auto;
+  width: 100%;
+  right:0%;
 
   img{
     .img;
     transform: rotate(360deg);
-    left:var(--cog-left-pos);
+    right:var(--cog-left-pos);
   }
 }
 
@@ -149,17 +156,17 @@ small{
 .cog-closed{
   height:@cog-dimensions;
   width:@cog-dimensions;
+  right:0%;
 
   img{
     .img;
-    left:0;
+
   }
 }
 
 @cog-index:@modal-index - 1;
 .cog {
   cursor: pointer;
-  left:1px;
   position:fixed;
   z-index:@cog-index;
   transition: all 1000ms 0ms;
