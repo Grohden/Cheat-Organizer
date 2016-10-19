@@ -1,3 +1,0 @@
-[submodule "app/configurations"]
-	path = app/configurations
-	url = https://github.com/Grohden/Configurations-Persister
